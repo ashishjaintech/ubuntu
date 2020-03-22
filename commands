@@ -1,0 +1,36 @@
+								UBUNTU COMMANDS
+
+Comment
+	#!/bin/bash
+Change directory and go in opt directory
+	cd /opt/
+Install 4 utilities with auto accept by -y flag by yum package manager
+	yum install wget* curl* vim* unzip* -y
+Install operating system pending updates auto yes
+	yum update -y
+Download zip file with wget os utility
+	wget https://www.free-css.com/assets/files/free-css-templates/download/page231/bizexpress-v1.0.1.zip
+Unzip downloaded zip file in current folder
+	unzip *.zip
+Cd in unzipped biz folder
+	cd Biz*
+Install http server with auto yes
+	yum install http* --skip-broken -y
+Move all current content to folder /var/www/html/ http server path for website
+	mv * /var/www/html/
+Starting http service
+	service httpd start
+Listing all files
+	ls -lrta
+System name
+	hostname
+Installed software path
+	which python
+System IP
+	ipconfig/ifconfig
+Package installer
+	yum (Yellowdog Updater Modified)
+	rpm (Red hat Package Manager)
+	
+
+
