@@ -15,11 +15,17 @@ Unzip downloaded zip file in current folder
 Cd in unzipped biz folder
 	cd Biz*
 Install http server with auto yes
-	yum install http* --skip-broken -y
+	sudo yum install http* --skip-broken -y
 Move all current content to folder /var/www/html/ http server path for website
 	mv * /var/www/html/
 Starting http service
 	service httpd start
+Status http service
+	service httpd status
+Stopping http service
+	service httpd stop
+Restarting http service
+	service httpd restart	
 Listing all files
 	ls -lrta
 System name
@@ -27,10 +33,34 @@ System name
 Installed software path
 	which python
 System IP
-	ipconfig/ifconfig
+	ifconfig | grep 192.168 
 Package installer
 	yum (Yellowdog Updater Modified)
 	rpm (Red hat Package Manager)
+Set hostname temporary
+	sudo hostname "<hostname>"
+	sudo hostnamectl set-hostname "<hostname>"
+Set hostname permanent
+	sudo vi /etc/hosts
+	:se nu
+	paste <ip> hostname in last line in file
+	:wq
+	/bin/bash - refresh
+How to get operating system details
+	uname -a
+	cat /etc/issue
+To know the daemon
+	rpmquery httpd
+Hit running webserver website page by curl*
+	curl <ip>
+Creating empty file
+	touch <filename>
+Install elinks with yum for checking website
+	yum install elinks
+	elinks <ip>
+
+
 	
+
 
 
